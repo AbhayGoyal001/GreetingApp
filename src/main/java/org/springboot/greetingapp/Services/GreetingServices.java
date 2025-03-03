@@ -61,6 +61,12 @@ public class GreetingServices {
         Info.setMessageID(me.getId());
         return Info;
     }
+
+    public String deleteByID(Long ID){
+        MessageEntity me = greetingRepository.findById(ID).orElseThrow(()->new RuntimeException("No Record Found"));
+        greetingRepository.delete(me);
+        return "Deleted Successfully";
+    }
 }
 
 
