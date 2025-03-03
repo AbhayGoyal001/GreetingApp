@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class GreetingServices {
-    @Autowired
+
     String greeting;
     GreetingRepository greetingRepository;
 
