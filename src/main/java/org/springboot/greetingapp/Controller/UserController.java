@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     @Autowired
     EmailService emailService;
-
+    @Autowired
     IAuthInterface authInterface;
 
 
@@ -24,6 +24,7 @@ public class UserController {
     // UC9 - For Registration of a User
     @PostMapping("/register")
     public String registerUser(@RequestBody AuthUserDTO user) {
+
         return authInterface.registerUser(user);
     }
 
